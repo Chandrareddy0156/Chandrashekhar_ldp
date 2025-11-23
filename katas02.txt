@@ -1,0 +1,277 @@
+
+basic staging
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ cat welcome.txt
+welcome to learning of git
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ echo 1>welcome.txt
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git diff
+warning: in the working copy of 'welcome.txt', LF will be replaced by CRLF the next time Git touches it
+diff --git a/welcome.txt b/welcome.txt
+index a9cd230..8b13789 100644
+--- a/welcome.txt
++++ b/welcome.txt
+@@ -1 +1 @@
+-welcome to learning of git
++
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ ^[[200~git diff --staged~
+bash: $'\E[200~git': command not found
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git diff --staged
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git diff --staged
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ gif diff --staged
+bash: gif: command not found
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git diff --staged
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ echo 2>welcome.txt
+
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   welcome.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        katas02
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git add .
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git diff
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git diff --staged
+diff --git a/katas02 b/katas02
+new file mode 100644
+index 0000000..e69de29
+diff --git a/welcome.txt b/welcome.txt
+index a9cd230..e69de29 100644
+--- a/welcome.txt
++++ b/welcome.txt
+@@ -1 +0,0 @@
+-welcome to learning of git
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ echo 3 > file.txt
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git diff
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git diff
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ echo 3>welcome.txt
+
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git diff
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ ls
+ README.md   file.txt  'hello Git learner'   katas-01   katas02   welcome.txt
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ cat welcome.txt
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ echo 3>welcome.txt
+
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git diff
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ echo 3 > welcome.txt
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git diff
+warning: in the working copy of 'welcome.txt', LF will be replaced by CRLF the next time Git touches it
+diff --git a/welcome.txt b/welcome.txt
+index e69de29..00750ed 100644
+--- a/welcome.txt
++++ b/welcome.txt
+@@ -0,0 +1 @@
++3
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git diff --staged
+diff --git a/katas02 b/katas02
+new file mode 100644
+index 0000000..e69de29
+diff --git a/welcome.txt b/welcome.txt
+index a9cd230..e69de29 100644
+--- a/welcome.txt
++++ b/welcome.txt
+@@ -1 +0,0 @@
+-welcome to learning of git
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   katas02
+        modified:   welcome.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   welcome.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file.txt
+
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git add .
+warning: in the working copy of 'welcome.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   file.txt
+        new file:   katas02
+        modified:   welcome.txt
+
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git restore --staged welcome.txt
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   file.txt
+        new file:   katas02
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   welcome.txt
+
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   file.txt
+        new file:   katas02
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   welcome.txt
+
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git add .;git commit -m "all are updated"
+warning: in the working copy of 'welcome.txt', LF will be replaced by CRLF the next time Git touches it
+[main df2f9d5] all are updated
+ 3 files changed, 2 insertions(+), 1 deletion(-)
+ create mode 100644 file.txt
+ create mode 100644 katas02
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git log
+commit df2f9d57e9a7219a4442c6ca3409bd9fdff3fc8f (HEAD -> main)
+Author: Chandrareddy0156 <chandra.annem@zemosolabs.com>
+Date:   Fri Nov 21 16:38:11 2025 +0530
+
+    all are updated
+
+commit 294be6d44849991257e3cd9a18888bbbc808afeb (origin/main, origin/HEAD)
+Author: Chandrareddy0156 <chandra.annem@zemosolabs.com>
+Date:   Fri Nov 21 16:23:43 2025 +0530
+
+    katas-01 execution all
+
+commit edd81df869a3b3c666a3aff8d24c6131bd7d8a92
+Author: ChandraReddy <140437413+Chandras123@users.noreply.github.com>
+Date:   Fri Nov 21 16:15:08 2025 +0530
+
+    Add README and execute first kata
+
+    Added initial README and executed first kata with updates.
+
+commit 9c27c8074ed9ada93697ba8c5bab90abcf8df2cb
+Author: Chandrareddy0156 <chandra.annem@zemosolabs.com>
+Date:   Fri Nov 21 16:11:02 2025 +0530
+
+    katas-01 execution all
+
+commit 12e212209ecc40bd4c7872b913c6143dfb630ba1
+Author: Chandrareddy0156 <chandra.annem@zemosolabs.com>
+Date:   Fri Nov 21 16:05:29 2025 +0530
+
+    first kata excution
+
+commit dad62c826f6003e640cd5563ce3a93a20571ef31
+Author: Chandrareddy0156 <chandra.annem@zemosolabs.com>
+Date:   Fri Nov 21 15:56:55 2025 +0530
+
+    first commit
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ cat welcome.txt
+3
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git retsore --staged welcome.txt
+git: 'retsore' is not a git command. See 'git --help'.
+
+The most similar command is
+        restore
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ echo 4 > welcome.txt
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ cat welcome.txt
+4
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git restore welcome.txt
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
