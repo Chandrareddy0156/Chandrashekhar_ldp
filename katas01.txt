@@ -1,0 +1,227 @@
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git init
+Reinitialized existing Git repository in C:/Users/chand/repos/katas/.git/
+
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git add README.md
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git commit -m "first commit"
+[main (root-commit) dad62c8] first commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git branch -M main
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git remote add origin https://github.com/Chandras123/katas.git
+error: remote origin already exists.
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 220 bytes | 220.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Chandras123/katas.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        katas-01
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git log
+commit dad62c826f6003e640cd5563ce3a93a20571ef31 (HEAD -> main, origin/main)
+Author: Chandrareddy0156 <chandra.annem@zemosolabs.com>
+Date:   Fri Nov 21 15:56:55 2025 +0530
+
+    first commit
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ touch "hello Git learner">>welcome.txt
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ ls -al
+total 16
+drwxr-xr-x 1 chandra 197609 0 Nov 21 16:01  ./
+drwxr-xr-x 1 chandra 197609 0 Nov 21 15:56  ../
+drwxr-xr-x 1 chandra 197609 0 Nov 21 15:59  .git/
+-rw-r--r-- 1 chandra 197609 0 Nov 21 15:56  README.md
+-rw-r--r-- 1 chandra 197609 0 Nov 21 16:01 'hello Git learner'
+-rw-r--r-- 1 chandra 197609 0 Nov 21 15:58  katas-01
+-rw-r--r-- 1 chandra 197609 0 Nov 21 16:01  welcome.txt
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ rm welcome.txt
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ ls -al
+total 16
+drwxr-xr-x 1 chandra 197609 0 Nov 21 16:01  ./
+drwxr-xr-x 1 chandra 197609 0 Nov 21 15:56  ../
+drwxr-xr-x 1 chandra 197609 0 Nov 21 15:59  .git/
+-rw-r--r-- 1 chandra 197609 0 Nov 21 15:56  README.md
+-rw-r--r-- 1 chandra 197609 0 Nov 21 16:01 'hello Git learner'
+-rw-r--r-- 1 chandra 197609 0 Nov 21 15:58  katas-01
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ echo "hello Git learner">>welcome.txt
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ ls -al
+total 17
+drwxr-xr-x 1 chandra 197609  0 Nov 21 16:02  ./
+drwxr-xr-x 1 chandra 197609  0 Nov 21 15:56  ../
+drwxr-xr-x 1 chandra 197609  0 Nov 21 15:59  .git/
+-rw-r--r-- 1 chandra 197609  0 Nov 21 15:56  README.md
+-rw-r--r-- 1 chandra 197609  0 Nov 21 16:01 'hello Git learner'
+-rw-r--r-- 1 chandra 197609  0 Nov 21 15:58  katas-01
+-rw-r--r-- 1 chandra 197609 18 Nov 21 16:02  welcome.txt
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ cat welcome.txt
+hello Git learner
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        hello Git learner
+        katas-01
+        welcome.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git add .
+warning: in the working copy of 'welcome.txt', LF will be replaced by CRLF the next time Git touches it
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   hello Git learner
+        new file:   katas-01
+        new file:   welcome.txt
+
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git commit -m "first kata excution"
+[main 12e2122] first kata excution
+ 3 files changed, 1 insertion(+)
+ create mode 100644 hello Git learner
+ create mode 100644 katas-01
+ create mode 100644 welcome.txt
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ echo "new changes">welcome.txt
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git statsu
+git: 'statsu' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   welcome.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git add welcome.txt
+warning: in the working copy of 'welcome.txt', LF will be replaced by CRLF the next time Git touches it
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   welcome.txt
+
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ echo "welcome to learning of git">welcome.txt
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git add .;git commit -m "katas-01 execution all";git push origin main
+warning: in the working copy of 'welcome.txt', LF will be replaced by CRLF the next time Git touches it
+[main 9c27c80] katas-01 execution all
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 589 bytes | 294.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/Chandras123/katas.git
+   dad62c8..9c27c80  main -> main
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+chandra@CHANDRA MINGW64 ~/repos/katas (main)
+$ git log
+commit 9c27c8074ed9ada93697ba8c5bab90abcf8df2cb (HEAD -> main, origin/main)
+Author: Chandrareddy0156 <chandra.annem@zemosolabs.com>
+Date:   Fri Nov 21 16:11:02 2025 +0530
+
+    katas-01 execution all
+
+commit 12e212209ecc40bd4c7872b913c6143dfb630ba1
+Author: Chandrareddy0156 <chandra.annem@zemosolabs.com>
+Date:   Fri Nov 21 16:05:29 2025 +0530
+
+    first kata excution
+
+commit dad62c826f6003e640cd5563ce3a93a20571ef31
+Author: Chandrareddy0156 <chandra.annem@zemosolabs.com>
+Date:   Fri Nov 21 15:56:55 2025 +0530
+
+    first commit
+
+
+    
+katas01 completed
