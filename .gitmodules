@@ -1,0 +1,3 @@
+[submodule "git-katas"]
+	path = git-katas
+	url = https://github.com/Chandrareddy0156/git-katas.git
