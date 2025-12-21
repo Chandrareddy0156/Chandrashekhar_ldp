@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Local storage and Session storage</title>
+
+</head>
+
+<body>
+
+  <div>Local Score: <span id="local">0</span></div><br>
+  <div>Session Score: <span id="session">0</span></div><br>
+
+  <button onclick="count()">Check</button><br><br>
+  <button onclick="clearLocal()">Clear</button>
+
+
+  <script>
+    let local = localStorage.local || 0;
+    let session = sessionStorage.session || 0;
+
+    localvalue();
+    sessionvalue();
+
+    function clearLocal() {
+      local = 0;
+      session = 0;
+      localStorage.removeItem("local");
+      sessionStorage.removeItem("session");
+      localvalue();
+
+      sessionvalue();
+    }
+
+    function count() {
+      local++;
+      session++;
+
+      localStorage.local = local;
+      sessionStorage.session = session;
+
+      localvalue();
+      sessionvalue();
+    }
+
+    function localvalue() {
+      document.getElementById("local").innerText = local;
+    }
+
+    function sessionvalue() {
+      document.getElementById("session").innerText = session;
+    }
+  </script>
+
+</body>
+
+</html>
