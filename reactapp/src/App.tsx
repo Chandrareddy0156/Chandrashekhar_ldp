@@ -1,6 +1,5 @@
-import Hello from "./Components/Picture";
+import Hello from "./components/Picture";
 import Gallery from "./Gallery";
-
 
 function App() {
   return (
