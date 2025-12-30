@@ -1,18 +1,13 @@
 import { createRoot } from "react-dom/client";
-// import Gallery from "./Gallery"
-// import Events from "./Events";
 
-import Form from "./Practice/Events";
+  import App from "./App.tsx";
+// import ToggleText from "./Formusestate.tsx";
+// import MyLibrary from "./use_stateassignment/Library.tsx";
+// import Checked from "./Formusestate.tsx"
 
-const rootElement = document.getElementById("root")!;
-
-
-
-createRoot(rootElement).render(
+createRoot(document.getElementById("root")!).render(
   <>
-  {/* <Gallery /> */}
-  {/* <Events /> */}
-  {/* <Button1 /> */}
-  <Form />
+  <App />
+  {/* <Checked /> */}
   </>
 );
