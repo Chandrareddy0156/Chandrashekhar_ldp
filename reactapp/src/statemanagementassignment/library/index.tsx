@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import { Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
 
-import { booksData } from "./Books";
-import type { Book} from "./Books"
-import BookCard from "./Muicard";
-import LibraryTabs from "./LibrarayTabs";
+import { booksData } from "../books";
+import type { Book } from "../books";
+import BookCard from "../muicard/index";
+import LibraryTabs from "../librarytabs/index";
 
 const LOCAL_STORAGE_KEY = "my-library-books";
 
@@ -57,3 +57,6 @@ const MyLibrary = () => {
 };
 
 export default MyLibrary;
+
+
+
