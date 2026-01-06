@@ -1,6 +1,6 @@
 import React from 'react';
 import { ThemeProvider,CssBaseline} from '@mui/material';
- import {Theme} from "./statemanagementassignment/theme/index.Theme"
+ import {Theme} from "./statemanagementassignment/theme"
 
 
 
