@@ -1,0 +1,33 @@
+Axios simplifies making API requests in React, 
+offering better syntax, built-in error handling, 
+and interceptors compared to the native Fetch 
+
+
+
+Axios is a promise-based HTTP client for the browser and Node.js.
+
+It lets you send GET, POST, PUT, DELETE, etc. requests to APIs or servers.
+
+Returns a Promise, which makes it easy to work with async/await syntax.
+
+
+
+
+
+. Why use Axios?
+
+While JavaScript has fetch built-in, Axios is often preferred because:
+
+Simpler syntax than fetch for sending requests and handling responses.
+
+axios.get("/api/users")
+  .then(res => console.log(res.data))
+  .catch(err => console.error(err));
+
+
+Automatic JSON parsing (no need for res.json() like fetch).
+
+Handles errors more gracefully. With fetch, only network errors throw, while Axios treats non-200 responses as errors.
+
+
+
