@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <title > Restaurent App</title>
+  <link rel="stylesheet" href="style.css" >
+</head>
+<body>
+
+  <div class="app">
+
+    <div class="tables">
+
+      <h2>Tables</h2>
+      <input type="text" placeholder="Search table" class="search" />
+      <div class="table-card ">
+        <h3>Table-1</h3>
+        <p>Rs.0 | Total items: 0</p>
+      </div>
+
+      <div class="table-card">
+        <h3>Table-2</h3>
+        <p>Rs.0 | Total items: 0</p>
+      </div>
+
+      <div class="table-card">
+        <h3>Table-3</h3>
+        <p>Rs.0 | Total items: 0</p>
+      </div>      
+      <div class="table-card">
+        <h3>Table-4</h3>
+        <p>Rs.0 | Total items: 0</p>
+      </div>  
+      <div class="table-card">
+        <h3>Table-5</h3>
+        <p>Rs.0 | Total items: 0</p>
+      </div>  
+      <div class="table-card">
+        <h3>Table-6</h3>
+        <p>Rs.0 | Total items: 0</p>
+      </div>  
+    </div>
+
+
+    <div class="divider"></div>
+
+    <!-- Creating MENU on right side  -->
+    <div class="menu">
+      <h2>Menu</h2>
+
+      <input type="text"   id="menuSearch" placeholder="Search Menu" class="search" >
+      
+      <div class="menu-item" draggable="true" data-price="105" data-category="Appetizers">
+        <h3>Crusty Garlic Focaccia with Melted Cheese</h3>
+        <span class="category">Appetizers</span>
+        <p>Rs.105.00</p>
+      </div>
+
+      <div class="menu-item"  draggable="true" data-price="105" data-category="Entree">
+        <h3>French Fries</h3>
+        <span class="category">Entree</span>
+        <p>Rs.105.00</p>
+      </div>
+
+      <div class="menu-item" draggable="true" data-price="105" data-category="Main Course" >
+        <h3>Home Country Fries with Herbs & Chilli Flakes</h3>
+        <span class="category">Main Course</span>
+        <p>Rs.105.00</p>
+      </div>
+      <div class="menu-item" draggable="true" data-price="135" data-category="Main Course">
+        <h3>French Fries with Cheese and Jalapenos</h3>
+        <span class="category">Main Course</span>
+        <p>Rs.135.00</p>
+      </div>
+    
+      <div class="menu-item" draggable="true" data-price="60" data-category="Beverages">
+        <h3>Orange Juice</h3>
+        <span class="category">Beverages</span>
+        <p>Rs.60.00</p>
+      </div>
+
+    
+      <div class="menu-item" draggable="true" data-price="100" data-category="Desserts">
+        <h3>Chocolate Brownie</h3>
+        <span class="category">Desserts</span>
+        <p>Rs.100.00</p>
+      </div>
+      <div class="menu-item" draggable="true" data-price="80" data-category="Desserts">
+        <h3>Smoothie venilla</h3>
+        <span class="category">Desserts</span>
+        <p>Rs.80.00</p>
+    </div>
+    
+    </div>
+
+  </div>
+<script src="app.js"></script>
+<!-- MODAL -->
+<div class="modal" id="orderModal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3 id="modalTitle">Table-1 Order Details</h3>
+      <span class="close" onclick="closeModal()">✖</span>
+
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>S.No</th>
+          <th>Item</th>
+          <th>Price</th>
+          <th>Servings</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="orderBody"></tbody>
+    </table>
+
+    <div class="total">
+      Total: Rs.<span id="grandTotal">0</span>
+    </div>
+
+    <button class="bill-btn" onclick="generateBill()">
+      CLOSE SESSION (GENERATE BILL)
+    </button>
+    
+  </div>
+</div>
+
+</body>
+</html>
