@@ -1,18 +1,14 @@
 import { createRoot } from "react-dom/client";
-// import Gallery from "./Gallery"
-// import Events from "./Events";
 
-import Form from "./Practice/Events";
-
-const rootElement = document.getElementById("root")!;
+  import App from "./App.tsx";
 
 
-
-createRoot(rootElement).render(
+createRoot(document.getElementById("root")!).render(
   <>
-  {/* <Gallery /> */}
-  {/* <Events /> */}
-  {/* <Button1 /> */}
-  <Form />
+  <App />
+ 
   </>
 );
+
+
+
