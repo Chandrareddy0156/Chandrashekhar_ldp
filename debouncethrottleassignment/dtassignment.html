@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Debounce And Throttle</title>
+</head>
+
+<body>
+
+    <h2>Debounce</h2>
+    <input type="text" id="debounceInput" placeholder="" />
+    <p>Result: <span id="debounceOutput"></span></p>
+
+    <h2>Throttle</h2>
+    <input type="text" id="throttleInput" placeholder="" />
+    <p>Result:<span id="throttleOutput"></span></p>
+
+    <script>
+        const debounceInput = document.getElementById('debounceInput');
+        const debounceOutput = document.getElementById('debounceOutput');
+
+        function debounce(func, delay) {
+            let timer;
+            return function () {
+                clearTimeout(timer);
+                timer = setTimeout(() => func.apply(this, arguments), delay);
+            };
+        }
+
+        function handleDebounce(value) {
+            debounceOutput.textContent = value;
+            console.log('output:', value);
+        }
+
+        const debouncedHandler = debounce(handleDebounce, 1000);
+
+        debounceInput.addEventListener('input', (e) => {
+            debouncedHandler(e.target.value);
+        });
+
+        const throttleInput = document.getElementById('throttleInput');
+        const throttleOutput = document.getElementById('throttleOutput');
+
+        function throttle(func, limit) {
+            let lastCall = 0;
+            return function () {
+                const now = Date.now();
+                if (now - lastCall >= limit) {
+                    lastCall = now;
+                    func.apply(this, arguments);
+                }
+            };
+        }
+
+        function handleThrottle(value) {
+            throttleOutput.textContent = value;
+            console.log('Throttled:', value);
+        }
+
+        const throttledHandler = throttle(handleThrottle, 1000);
+
+        throttleInput.addEventListener('input', (e) => {
+            throttledHandler(e.target.value);
+        });
+    </script>
+
+</body>
+
+</html>
